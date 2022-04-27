@@ -1,0 +1,10 @@
+D:\Users\manoj\git\ProductManagement>docker images
+REPOSITORY                        TAG       IMAGE ID       CREATED         SIZE
+pdm-application.jar               latest    c368b5643db2   7 seconds ago   702MB
+<none>                            <none>    700401301b7f   14 hours ago    702MB
+<none>                            <none>    3e91ab729ebd   5 days ago      715MB
+webcore                           dev       8c0bb56677e9   10 days ago     208MB
+dockertest-demo.jar               latest    10c21743dc75   10 days ago     677MB
+mcr.microsoft.com/dotnet/aspnet   6.0       683c56113596   3 weeks ago     208MB
+
+D:\Users\manoj\git\ProductManagement>docker run pdm-application.jar -p 9006:9005

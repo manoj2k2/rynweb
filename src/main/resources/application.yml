@@ -1,0 +1,35 @@
+server:
+  port: 9005
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/productmanagement?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: Jaipur@1234
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+  application:
+    name: productmanagement
+
+  jpa:
+    show-sql: true
+
+
+    hibernate:
+      use-new-id-generator-mappings: false
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+appSetting:
+  exchange:
+    currencyApi: http://data.fixer.io/api/latest?access_key=3b36faf88f13aa6c58033c6c966f55a5
+
+#security:
+#  ignored: /**
+#  basic:
+#    enabled: false
+#management:
+#  security:
+#    enabled: false

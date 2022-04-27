@@ -1,0 +1,782 @@
+{
+	"info": {
+		"_postman_id": "13d56e09-ecea-43b2-a6b9-f4927183150d",
+		"name": "Adidas Prufung",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9005/api/Category/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findby Name",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9005/api/Category/all?name=SPRT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"all"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "SPRT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"age\": \"MEN\",\r\n    \"brand\": \"ADI\",\r\n    \"div\": \"PERF\",\r\n    \"title\": \"SPRT\",\r\n    \"gender\": \"MEN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/Category/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"category_id\": 2,\r\n        \"products\": [],\r\n        \"path\": \"ADI ORI MEN MEN Footware\",\r\n        \"gender\": \"MEN \",\r\n        \"age\": \"MEN\",\r\n        \"title\": \"Footware\",\r\n        \"brand\": \"ADI\",\r\n        \"div\": \"ORI\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/Category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBy Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"category_id\": 2,\r\n        \"products\": [],\r\n        \"path\": \"ADI ORI MEN MEN Footware\",\r\n        \"gender\": \"MEN \",\r\n        \"age\": \"MEN\",\r\n        \"title\": \"Footware\",\r\n        \"brand\": \"ADI\",\r\n        \"div\": \"RBK\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/Category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9005/api/Category/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product CURD",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9005/api/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productbyId",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9005/api/Category/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findby Name",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9005/api/Category/all?name=SPRT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"all"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "SPRT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"age\": \"MEN\",\r\n    \"brand\": \"ADI\",\r\n    \"div\": \"PERF\",\r\n    \"title\": \"SPRT\",\r\n    \"gender\": \"MEN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/Category/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"category_id\": 2,\r\n        \"products\": [],\r\n        \"path\": \"ADI ORI MEN MEN Footware\",\r\n        \"gender\": \"MEN \",\r\n        \"age\": \"MEN\",\r\n        \"title\": \"Footware\",\r\n        \"brand\": \"ADI\",\r\n        \"div\": \"ORI\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/Category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBy Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"category_id\": 2,\r\n        \"products\": [],\r\n        \"path\": \"ADI ORI MEN MEN Footware\",\r\n        \"gender\": \"MEN \",\r\n        \"age\": \"MEN\",\r\n        \"title\": \"Footware\",\r\n        \"brand\": \"ADI\",\r\n        \"div\": \"RBK\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/Category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9005/api/Category/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"Category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9005/api/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductById",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9005/api/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NewProduct Add",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"ADI SUPERSTAR FOUNDATION\",\r\n    \"code\": \"B2A123\",\r\n    \"price\": 4000.0,\r\n    \"baseCurrency\": \"EUR\",\r\n    \"priceCurrency\":\"INR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/product/manage/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"product",
+								"manage",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setCategory",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": 3,\r\n    \"products\": [],\r\n    \"path\": \"ADI RBK MEN  MEN Footware\",\r\n    \"div\": \"RBK\",\r\n    \"brand\": \"ADI\",\r\n    \"age\": \"MEN\",\r\n    \"gender\": \"MEN \",\r\n    \"title\": \"Footware\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/product/manage/setCategory/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"product",
+								"manage",
+								"setCategory",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setAttributes",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": 3,\r\n    \"products\": [],\r\n    \"path\": \"ADI RBK MEN  MEN Footware\",\r\n    \"div\": \"RBK\",\r\n    \"brand\": \"ADI\",\r\n    \"age\": \"MEN\",\r\n    \"gender\": \"MEN \",\r\n    \"title\": \"Footware\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9005/api/product/manage/setCategory/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9005",
+							"path": [
+								"api",
+								"product",
+								"manage",
+								"setCategory",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
