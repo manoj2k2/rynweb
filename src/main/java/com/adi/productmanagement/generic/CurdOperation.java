@@ -1,4 +1,4 @@
-package com.adi.productmanagement.controller;
+package com.adi.productmanagement.generic;
 
 import com.adi.productmanagement.model.Category;
 import com.adi.productmanagement.service.CategoryService;
@@ -11,19 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/api/Category")
-
-// rest controller for category CURD operation
-public class CategoryController   {
+public class CurdOperation<T> implements  ServiceInterface  {
 
     @Autowired
     private CategoryService categoryService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Category>> getAll(@RequestParam(required = false) String name) {
+    public ResponseEntity<List<T>> getAll(@RequestParam(required = false) String name) {
         try {
-            List<Category> categories = new ArrayList<Category>();
+            List<T> categories = new ArrayList<T>();
             if (name == null)
                 categoryService.getCategoryRepository().findAll().forEach(categories::add);
             else
@@ -38,8 +34,8 @@ public class CategoryController   {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Category> getCategoryById(@PathVariable("id") int id) {
-        Optional<Category> categoryData = categoryService.getCategoryRepository().findById(id);
+    public ResponseEntity<T> getCategoryById(@PathVariable("id") int id) {
+        Optional<T> categoryData = categoryService.getCategoryRepository().findById(id);
         if (categoryData.isPresent()) {
             return new ResponseEntity<>(categoryData.get(), HttpStatus.OK);
         } else {
@@ -48,7 +44,7 @@ public class CategoryController   {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<Category> createCategory(@RequestBody Category category) {
+    public ResponseEntity<T> createCategory(@RequestBody T category) {
         try {
             Category _category = categoryService.getCategoryRepository()
                     .save(category);
@@ -59,8 +55,8 @@ public class CategoryController   {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Category> updateCategory(@PathVariable("id") int id, @RequestBody Category category) {
-        Optional<Category> categoryData = categoryService.getCategoryRepository().findById(id);
+    public ResponseEntity<T> updateCategory(@PathVariable("id") int id, @RequestBody T category) {
+        Optional<T> categoryData = categoryService.getCategoryRepository().findById(id);
         if (categoryData.isPresent()) {
             Category _category = categoryData.get();
             _category.setBrand(category.getBrand());

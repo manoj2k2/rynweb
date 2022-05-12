@@ -24,8 +24,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     // Authorization : Role -> Access
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
-                .antMatchers("/read/**").hasRole("USER")
-                .antMatchers("/**").hasRole("ADMIN").and()
+                .antMatchers("/**").permitAll()
+                .antMatchers("/s/**").hasRole("ADMIN").and()
                 .csrf().disable().headers().frameOptions().disable();
     }
 

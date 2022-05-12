@@ -11,11 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/api/Category")
+public class CURDOperationBase<T>     {
 
-// rest controller for category CURD operation
-public class CategoryController   {
 
     @Autowired
     private CategoryService categoryService;
